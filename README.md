@@ -49,6 +49,7 @@ class Example extends React.Component {
 | backspaceImg | number | 'backspace.png' | Image to use for backspace. Default one is used if nothing is provided. To use image from version 1.0.7 and below, use require('./node_modules/react-native-virtual-keyboard/src/backspace_old.png') |
 | applyBackspaceTint | bool | true | tint backspace with tintColor style option, or leave it as it is |
 | decimal | bool | false | display '.' decimal on keyboard |
+| pressStatus | bool | false | Clickability state of the keyboard. |
 | rowStyle | style | - | override style for rows |
 | cellStyle | style | - | override style for cells |
 | textStyle | style | - | override style for text |

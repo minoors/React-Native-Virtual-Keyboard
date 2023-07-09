@@ -21,7 +21,7 @@ export default class VirtualKeyboard extends Component {
 
 	static propTypes = {
 		pressMode: PropTypes.oneOf(['string', 'char']), 
-		pressStatus: PropTypes.bool,
+		pressStatus: PropTypes.bool, // clickability state 
 		color: PropTypes.string,
 		onPress: PropTypes.func.isRequired,
 		backspaceImg: PropTypes.number,

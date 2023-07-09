@@ -43,7 +43,7 @@ class Example extends React.Component {
 | Key | Type | Default | Description |
 | --- | --- | --- | --- |
 | pressMode | string | 'string' | Value to pass to onPress. 'char' = each individual pressed symbol, 'string' = form and pass whole string |
-| pressStatus | bool | false | Clickability state of the keyboard. |
+| pressStatus | bool | false | It is the clickability state of the keyboard, must be true to not click. |
 | color | string | 'gray' | color of text and backspace tinting (if enabled) |
 | onPress | function | \*required | The handler when a key is pressed. If pressMode === 'char', 'back' is passed for backspace |
 | clearOnLongPress | bool | false | Is text will be cleared on backspace long press, or in pressMode === 'char', 'clear' is passed for long press |

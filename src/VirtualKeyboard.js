@@ -20,7 +20,8 @@ const PRESS_MODE_STRING = 'string';
 export default class VirtualKeyboard extends Component {
 
 	static propTypes = {
-		pressMode: PropTypes.oneOf(['string', 'char']),
+		pressMode: PropTypes.oneOf(['string', 'char']), 
+		pressStatus: PropTypes.bool,
 		color: PropTypes.string,
 		onPress: PropTypes.func.isRequired,
 		backspaceImg: PropTypes.number,
@@ -99,10 +100,14 @@ export default class VirtualKeyboard extends Component {
 				} else if (val === CLEAR) {
 					curText = "";
 				} else {
-					curText += val;
+					if (this.props.pressStatus == false) {
+						curText += val;
+					}
 				}
 			} else {
-				curText += val;
+				if (this.props.pressStatus == false) {
+					curText += val;
+				}
 			}
 			this.setState({ text: curText });
 			this.props.onPress(curText);
